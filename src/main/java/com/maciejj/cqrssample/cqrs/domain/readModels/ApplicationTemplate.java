@@ -16,6 +16,8 @@ public class ApplicationTemplate {
     @Getter
     String name;
 
+    public ApplicationTemplate() { }
+
     public ApplicationTemplate(String name) {
         this.name = name;
     }
