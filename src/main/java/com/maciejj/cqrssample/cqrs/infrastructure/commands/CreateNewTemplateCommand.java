@@ -1,4 +1,4 @@
-package com.maciejj.cqrssample.cqrs.commands;
+package com.maciejj.cqrssample.cqrs.infrastructure.commands;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

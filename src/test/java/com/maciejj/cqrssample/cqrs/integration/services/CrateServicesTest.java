@@ -1,8 +1,8 @@
 package com.maciejj.cqrssample.cqrs.integration.services;
 
 import com.maciejj.cqrssample.cqrs.integration.BaseIntegrationTest;
-import com.maciejj.cqrssample.cqrs.commands.CreateNewTemplateCommand;
-import com.maciejj.cqrssample.cqrs.domain.ApplicationTemplatesRepository;
+import com.maciejj.cqrssample.cqrs.infrastructure.commands.CreateNewTemplateCommand;
+import com.maciejj.cqrssample.cqrs.domain.ApplicationTemplatesWriteRepository;
 import io.restassured.RestAssured;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CrateServicesTest extends BaseIntegrationTest {
 
     @Autowired
-    ApplicationTemplatesRepository repository;
+    ApplicationTemplatesWriteRepository repository;
 
     @Test
     public void shouldStoreTemplateInDb(){

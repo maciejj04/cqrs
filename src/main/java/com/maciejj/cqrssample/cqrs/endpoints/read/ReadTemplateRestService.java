@@ -1,7 +1,7 @@
 package com.maciejj.cqrssample.cqrs.endpoints.read;
 
-import com.maciejj.cqrssample.cqrs.domain.ApplicationTemplatesRepository;
-import com.maciejj.cqrssample.cqrs.domain.readModels.ApplicationTemplate;
+import com.maciejj.cqrssample.cqrs.domain.ApplicationTemplatesWriteRepository;
+import com.maciejj.cqrssample.cqrs.domain.ApplicationTemplateModel;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,15 +11,15 @@ import javax.transaction.Transactional;
 @RestController
 public class ReadTemplateRestService {
     // To be implemented later. For now just for manual testing.
-    ApplicationTemplatesRepository repository;
+    ApplicationTemplatesWriteRepository repository;
 
-    public ReadTemplateRestService(ApplicationTemplatesRepository repository) {
+    public ReadTemplateRestService(ApplicationTemplatesWriteRepository repository) {
         this.repository = repository;
     }
 
     @Transactional
     @RequestMapping(method = RequestMethod.GET, path = "/templates")
-    public Iterable<ApplicationTemplate> getAllTemplates(){
+    public Iterable<ApplicationTemplateModel> getAllTemplates(){
         return repository.findAll();
     }
 

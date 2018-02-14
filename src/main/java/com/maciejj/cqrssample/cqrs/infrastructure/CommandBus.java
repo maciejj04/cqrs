@@ -1,12 +1,13 @@
-package com.maciejj.cqrssample.cqrs;
+package com.maciejj.cqrssample.cqrs.infrastructure;
 
-import com.maciejj.cqrssample.cqrs.commandHandlers.ICommandHandler;
-import com.maciejj.cqrssample.cqrs.commands.Command;
+import com.maciejj.cqrssample.cqrs.infrastructure.commandHandlers.ICommandHandler;
+import com.maciejj.cqrssample.cqrs.infrastructure.commands.Command;
+import com.maciejj.cqrssample.cqrs.infrastructure.commands.CreateNewTemplateCommand;
 
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-public class CommandBus {
+public class CommandBus implements ICommandSender {
 
     private Map<?, ICommandHandler> commandHandlers;
 

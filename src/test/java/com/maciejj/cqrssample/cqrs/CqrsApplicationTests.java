@@ -1,5 +1,6 @@
 package com.maciejj.cqrssample.cqrs;
 
+import com.maciejj.cqrssample.cqrs.infrastructure.CommandBus;
 import com.maciejj.cqrssample.cqrs.integration.BaseIntegrationTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
